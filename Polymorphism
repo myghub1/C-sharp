@@ -1,0 +1,49 @@
+using System;
+
+namespace MyApplication
+{
+    class Animal  // Base class 
+    {
+        public virtual void animalМovement()
+        {
+            Console.WriteLine("The animal is moving");
+        }
+    }
+
+    class Fish : Animal  // Derived class  
+    {
+        public override void animalМovement()
+        {
+            Console.WriteLine("The fish is swimming");
+        }
+    }
+
+    class Bird : Animal  // Derived class 
+    {
+        public override void animalМovement()
+        {
+            Console.WriteLine("The bird is flying");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myAnimal = new Animal();  // Create object
+            Animal myFish = new Fish();  
+            Animal myBird = new Bird();  
+
+            myAnimal.animalМovement();
+            myFish.animalМovement();
+            myBird.animalМovement();
+        }
+    }
+}
+
+
+
+
+
+
+
